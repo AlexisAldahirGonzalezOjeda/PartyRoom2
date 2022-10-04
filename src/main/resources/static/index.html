@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Alquiler de salones de Fiesta</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+
+        <h1>Categoria</h1>
+
+        <div>
+            <input type="number" id="idCategoria" placeholder="Id Categoria" disabled>
+            <input type="text" id="nameCat" placeholder="Nombre Categoria">
+            <input type="text" id="descriptionCat" placeholder="Descripción Categoria"> 
+        </div>
+
+        <button onclick="traerInformacionCat()">Consultar</button>
+        <button onclick="guardarInformacionCat()">Insertar</button>
+
+        <div id="resultadoCat"> 
+        </div>
+        
+        <h1>Salones de Fiesta</h1>
+
+        <div>
+            <input type="number" id="idPartyRoom" placeholder="Id Salón" disabled>
+            <input type="number" id="idCat" placeholder="Id Categoria">
+            <input type="text" id="nameRoom" placeholder="Nombre Salón de Fiesta">
+            <input type="text" id="ownerRoom" placeholder="Propietario Salón de Fiesta"> 
+            <input type="number" id="capacityRoom" placeholder="Capacidad Salón de Fiesta">
+            <input type="text" id="descriptionRoom" placeholder="Descripción Salón de Fiesta">
+        </div> 
+        
+        <button onclick="traerInformacionRoom()">Consultar</button>
+        <button onclick="guardarInformacionRoom()">Insertar</button>
+
+        <div id="resultadoRoom"> 
+        </div>
+
+        <h1>Clientes</h1>
+
+        <div>
+            <input type="number" id="idCliente" placeholder="Id Cliente" disabled>
+            <input type="text" id="nameCli" placeholder="Nombre Cliente">
+            <input type="email" id="emailCli" placeholder="Correo Cliente">
+            <input type="password" id="passwordCli" placeholder="Contraseña Cliente"> 
+            <input type="number" id="ageCli" placeholder="Edad Cliente"> 
+        </div> 
+        
+        <button onclick="traerInformacionCli()">Consultar</button>
+        <button onclick="guardarInformacionCli()">Insertar</button>
+
+        <div id="resultadoCli"> 
+        </div>
+        
+        <h1>Mensajes</h1>
+
+        <div> 
+            <input type="number" id="idMensaje" placeholder="Id Mensaje" disabled>
+            <input type="number" id="idCli" placeholder="Id Cliente">
+            <input type="number" id="idRoom" placeholder="Id Salón de Fiesta">
+            <input type="text" id="messageText" placeholder="Mensaje"> 
+        </div>
+        
+        <button onclick="traerInformacionMens()">Consultar</button>
+        <button onclick="guardarInformacionMens()">Insertar</button>
+
+        <div id="resultadoMens"> 
+        </div>
+ 
+        <h1>Reservas</h1>
+
+        <div>
+            <input type="number" id="idReserva" placeholder="Id Reserva" disabled>
+            <input type="number" id="idCli2" placeholder="Id Cliente">
+            <input type="number" id="idRoom2" placeholder="Id Salón de Fiesta">
+            <input type="date" id="startDate">
+            <input type="date" id="devolutionDate"> 
+        </div>
+        
+        <button onclick="traerInformacionRes()">Consultar</button>
+        <button onclick="guardarInformacionRes()">Insertar</button>
+
+        <div id="resultadoRes"> 
+        </div> 
+ 
+    </body>
+    <script type="text/javascript" src="js/funcionesCat.js"></script>
+    <script type="text/javascript" src="js/funcionesRoom.js"></script>
+    <script type="text/javascript" src="js/funcionesCli.js"></script>
+    <script type="text/javascript" src="js/funcionesMens.js"></script>
+    <script type="text/javascript" src="js/funcionesRes.js"></script>
+</html>
